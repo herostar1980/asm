@@ -1,0 +1,127 @@
+<div class="container">
+    <div class="row ">
+        <div class="col-sm-6 mt-5 text-center">
+            <div class="card" style="background-color: #ffffff; border-color: #5d5d5d;">
+                <img class="card-img-top w-100" src="assets/IMG/3.jpg" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">LOXTON - AUSTRALIA WINE</h4>
+                    <p class="card-text">Only in Vietwine</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 mt-5 text-center">
+            <div class="card" style="background-color: #ffffff; border-color: #5d5d5d;">
+                <img class="card-img-top w-100" src="assets/IMG/4.jpg" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">KING VALLEY - AUSTRALIA WINE</h4>
+                    <p class="card-text">Only in Vietwine</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row pt-5">
+    <aside class="col-sm-3 text-left">
+        <div class="card">
+            <div class="card-header">
+                <a class="btn text-dark btn-warning" id="btn" data-toggle="collapse" href="#type" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fa fa-list" aria-hidden="true"></i> <strong> LOẠI VANG </strong>
+                </a>
+            </div>
+            <div class="list-group collapsed" id="type">
+                <a href="#" class="list-group-item text-dark"> Vang đỏ <span
+                        class="badge float-right m-auto badge-danger">23</span></a>
+                <a href="#" class="list-group-item text-dark">Vang trắng <span
+                        class="badge float-right m-auto badge-danger">23</span></a>
+                <a href="#" class="list-group-item text-dark">Vang hồng <span
+                        class="badge float-right m-auto badge-danger">23</span></a>
+                <a href="#" class="list-group-item text-dark">Vang nổ <span
+                        class="badge float-right m-auto badge-danger">23</span></a>
+                <a href="#" class="list-group-item text-dark">Vang ngọt <span
+                        class="badge float-right m-auto badge-danger">23</span></a>
+                <a href="#" class="list-group-item text-dark">Vang hết hạn sử dụng <span
+                        class="badge float-right m-auto badge-danger">23</span></a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header ">
+                <a class="text-dark btn btn-warning" id="btn" data-toggle="collapse" href="#grape" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fa fa-list" aria-hidden="true"></i> <strong> GIỐNG NHO </strong>
+                </a>
+            </div>
+            <div class="list-group collapsed" id="grape">
+                <a href="#" class="list-group-item text-dark"> Cabernet Franc<span
+                        class="badge float-right m-auto badge-danger">23</span></a>
+                <a href="#" class="list-group-item text-dark"> Pilot <span
+                        class="badge float-right m-auto badge-danger">23</span></a>
+                <a href="#" class="list-group-item text-dark"> Cabernet Sauvignon <span
+                        class="badge float-right m-auto badge-danger">23</span></a>
+                <a href="#" class="list-group-item text-dark"> Shiraz <span
+                        class="badge float-right m-auto badge-danger">23</span></a>
+                <a href="#" class="list-group-item text-dark"> Chardonnay <span
+                        class="badge float-right m-auto badge-danger">23</span></a>
+                <a href="#" class="list-group-item text-dark"> Negroamaro <span
+                        class="badge float-right m-auto badge-danger">23</span></a>
+            </div>
+        </div>
+    </aside>
+    <article class="col-sm-9">
+        <div class="container ">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+            </nav>
+            <div class="row " data-aos="fade-up" data-aos-duration="3000" data-aos-deplay="400">
+                <div *ngFor='let data of products$  | paginate: { itemsPerPage: 6, currentPage: p } ' class="col-sm-4">
+                    <div class="card text-center ">
+                        <img class="card-img-top w-100" src={{data.img}} alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">{{data.name | lowercase}}</h6>
+                            <div class="caption ">
+                                {{data.price | currency }}
+                                <div class="btn btn-sm btn-warning ">
+                                    <a class="text-dark" [title]="data.name + ' details'"
+                                        [routerLink]="['/products', data.id]">
+                                        Detail
+                                    </a>
+                                </div>
+                                <!-- <div class="btn btn-sm btn-warning "> <a class="text-dark" data-toggle="modal" data-target="#productDetail" >
+                              Detail
+                          </a> </div> -->
+                            </div>
+                            <!-- <div class="modal fade" id="productDetail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- <pagination-controls (pageChange)="p = $event">  </pagination-controls> -->
+
+        </div>
+    </article>
+
+</div>

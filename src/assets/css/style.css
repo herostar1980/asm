@@ -1,0 +1,59 @@
+html,body{
+  width: 100%;
+  padding: 0 ;
+}
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown>.dropdown-toggle:active {
+    /* Without this, clicking will make it sticky */
+      pointer-events: none;
+  }  
+.my-nav { 
+  opacity: 0.5
+}
+.my-nav:hover { 
+  opacity: 1;
+ background-color: #4b4b4b;
+ transition: 1s;
+}
+.backgr {
+  background-image: url(/IMG/5.jpg);
+  background-size: 100% 100%;
+  min-height: 820px;
+}
+.jumbotron {
+  background-color: transparent;
+}
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIETWINE</title>
+  <base href="/">
+  <link rel="shortcut icon" href="assets/IMG/32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- <link rel="stylesheet" href="assets/css/simple-line-icons.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+</head>
+<body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+      AOS.init();
+      function changeColor() {
+          var x = document.getElementById("colorpicker").value;
+          $("a#btn").removeClass("btn-warning");
+          $("div.btn").removeClass("btn-warning");
+          $("a#btn").css("background-color", x);
+          $("div.btn").css("background-color", x);
+
+
+
+      }
+  </script>
+    <app-root></app-root>
+</body>
+</html>
